@@ -15,15 +15,39 @@ function createCourse(): { name: string, price: number } {
 }
 
 type User = {
+    readonly _id: string,
     name: string,
     email: string,
-    isActive: boolean
+    isActive: boolean,
+    credCardDetails?: number // optional prop
 };
 
-function createUser(user: User): User { 
-    return {name: user.name, email: user.email, isActive: user.isActive};
+let myUser: User = {
+    _id: "12345",
+    name: "h",
+    email: "h@h.c",
+    isActive: true
+};
+
+//myUser._id = "dwad"; // not possible because readonly;
+
+
+type cardNumber = {
+    cardNumber: string
 }
 
-createUser({name:"Onur", email:"onur@dev.be", isActive: true});
+type cardDate = {
+    cardDate: string
+}
+
+type cardDetails = cardNumber & cardDate & {
+    cvv: number
+}
+
+let sheesh: cardDetails = {
+    cardNumber: "d",
+    cardDate: "s",
+    cvv: 4
+}
 
 export { }

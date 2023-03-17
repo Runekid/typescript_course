@@ -11,7 +11,14 @@ var newUser = { name: "onur", isPaid: false, email: "onur@dev.be" };
 function createCourse() {
     return { name: "reactjs", price: 399 };
 }
-function createUser(user) {
-    return { name: user.name, email: user.email, isActive: user.isActive };
-}
-createUser({ name: "Onur", email: "onur@dev.be", isActive: true });
+var myUser = {
+    _id: "12345",
+    name: "h",
+    email: "h@h.c",
+    isActive: true
+};
+var sheesh = {
+    cardNumber: "d",
+    cardDate: "s",
+    cvv: 4
+};
