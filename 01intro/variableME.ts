@@ -11,4 +11,12 @@ userid.toFixed();
 
 let isLoggedIn: boolean = false;
 
+let hero: string;
+
+function getHero() {
+    return "spiderman";
+}
+
+hero = getHero();
+
 export {}

@@ -7,3 +7,8 @@ console.log(greetings);
 var userid = 3344.45;
 userid.toFixed();
 var isLoggedIn = false;
+var hero;
+function getHero() {
+    return "spiderman";
+}
+hero = getHero();
