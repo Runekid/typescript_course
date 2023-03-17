@@ -8,4 +8,8 @@ var user = {
 function createUser(_a) {
     var string = _a.name, boolean = _a.isPaid;
 }
-createUser({ name: "onur", isPaid: false });
+var newUser = { name: "onur", isPaid: false, email: "onur@dev.be" };
+createUser(newUser);
+function createCourse() {
+    return { name: "reactjs", price: 399 };
+}
