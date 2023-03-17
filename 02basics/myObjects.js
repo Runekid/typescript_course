@@ -5,11 +5,13 @@ var user = {
     email: "onur@dev.be",
     isActive: true
 };
-function createUser(_a) {
-    var string = _a.name, boolean = _a.isPaid;
-}
+//function createUser({ name: string, isPaid: boolean }) { }
 var newUser = { name: "onur", isPaid: false, email: "onur@dev.be" };
-createUser(newUser);
+//createUser(newUser);
 function createCourse() {
     return { name: "reactjs", price: 399 };
 }
+function createUser(user) {
+    return { name: user.name, email: user.email, isActive: user.isActive };
+}
+createUser({ name: "Onur", email: "onur@dev.be", isActive: true });
