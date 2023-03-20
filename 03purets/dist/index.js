@@ -12,7 +12,7 @@ class User {
     constructor(name, email) {
         this.name = name;
         this.email = email;
-        this._courseCount = 1;
+        this._courseCount = 1; // also accessible in subclasses
         this.city = "";
     }
     get getAppleEmail() {
@@ -29,6 +29,15 @@ class User {
     }
     deleteToken() {
         console.log("token deleted");
+    }
+}
+class subUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
     }
 }
 const onur = new User("Onur", "onur@dev.be");

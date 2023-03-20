@@ -10,7 +10,7 @@
 
 class User {
 
-    private _courseCount: number = 1
+    protected _courseCount: number = 1 // also accessible in subclasses
 
     city: string = "";
     constructor(public name: string,
@@ -36,6 +36,13 @@ class User {
 
     private deleteToken() {
         console.log("token deleted")
+    }
+}
+
+class subUser extends User {
+    private isFamily: booelan = true;
+    changeCourseCount() {
+        this._courseCount = 4;  
     }
 }
 
