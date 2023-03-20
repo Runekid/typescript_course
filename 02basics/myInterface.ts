@@ -12,6 +12,11 @@ interface User { // this is reopening an interface -> difference with type
     ghToken: string
 }
 
+//inheritance
+interface Admin extends User {
+    role: "admin" | "ta" | "learner"
+} 
+
 const onur: User = {dbId: 12, userId: 45, email: "onur@de.b", startTrial: () => {
     return "trial started"
 },
