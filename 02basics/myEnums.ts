@@ -13,3 +13,5 @@ const enum SeatChoice { // const will just assign value to variable
 }
 
 const hcSeat = SeatChoice.AISLE;
+
+export {}
