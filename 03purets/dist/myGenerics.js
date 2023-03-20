@@ -16,3 +16,9 @@ function identityFour(val) {
     return val;
 }
 identityFour({ brand: "Coke", type: 1 });
+function getSearchProducts(products) {
+    return products[3];
+}
+const getMoreSearchProducts = (products) => {
+    return products[3];
+};

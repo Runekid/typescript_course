@@ -26,3 +26,11 @@ interface Bottle {
 }
 
 identityFour<Bottle>({brand: "Coke", type: 1})
+
+function getSearchProducts<T>(products: T[]): T {
+    return products[3];
+}
+
+const getMoreSearchProducts = <T,/*not jsx syntax but generics syntax*/>(products: T[]): T => {
+    return products[3]
+}
