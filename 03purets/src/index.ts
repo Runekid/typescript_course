@@ -1,10 +1,19 @@
+// class User {
+//     name: string;
+//     email: string;
+//     city: string = "";
+//     constructor(name: string, email: string) {
+//         this.email = email;
+//         this.name = name;
+//     }
+// }
+
 class User {
-    name: string;
-    email: string;
     city: string = "";
-    constructor(name: string, email: string) {
-        this.email = email;
-        this.name = name;
+    constructor(public name: string,
+         public email: string,
+         //private userId: string
+         ) {
     }
 }
 
