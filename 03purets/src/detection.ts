@@ -45,3 +45,28 @@ function isAdminAccount(account: User | Admin) {
     }
     return false
 }
+
+function logValue(x: Date | string) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+    } else {
+        console.log(x.toUpperCase())
+    }
+}
+
+type Fish = {swim(): void}
+type Bird = {fly(): void}
+
+function isFish(pet: Fish | Bird): pet is Fish /* will now return type of pet instead of true or false */ {
+    return (pet as Fish).swim !== undefined
+}
+
+function getFood(pet:Fish | Bird) {
+    if (isFish(pet)) {
+        pet
+        return "fish food"
+    } else {
+        pet
+        return "bird food"
+    }
+}
